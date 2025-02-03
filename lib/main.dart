@@ -12,7 +12,7 @@ void main() {
             colors: [Colors.cyan, Colors.blue],
           ),
         ),
-        child: const StartScreen()
+        child: const ResultScreen(selectedAnswers: [],)
       ),
     ),
   ));
