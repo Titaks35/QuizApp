@@ -20,6 +20,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   final List<String> selectedAnswers = [];
 
   void answerQuestion(String selectedAnswer) {
+    selectedAnswers.add(selectedAnswer); // Add this function to stored the selected answer.
     setState(() {
       if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
