@@ -7,48 +7,37 @@ class QuestionSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
-        child: Column(
+    return Column(
+      children: [
+        Row(
           children: [
-            ...summary.map(
-              (questions) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 30,
-                        height: 30,
-                        decoration: BoxDecoration(
-                            color: Colors.lightBlue.shade100,
-                            shape: BoxShape.circle),
-                        alignment: Alignment.center,
-                        child: Text('${(questions['question_id'] as int) + 1}'),
-                      ),
-                      const SizedBox(
-                        width: 30,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('${questions['question_id']}',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 25)),
-                          Text('${questions['user_answer']}',
-                              style: TextStyle(color: Colors.red.shade300)),
-                          Text('${questions['correct_answer']}',
-                              style: TextStyle(color: Colors.white)),
-                        ],
-                      ),
-                    ],
-                  ),
-                );
-              },
+            Container(
+              width: 30,
+              height: 30,
+              decoration: BoxDecoration(
+                  color: Colors.purple.shade300, shape: BoxShape.circle),
+              alignment: Alignment.center,
+              child: Text(
+                "1",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+
+            SizedBox(width: 10,),
+
+            Column(
+              children: [
+                Text("data1"),
+                Text("data2"),
+                Text("data3"),
+              ],
             ),
           ],
         ),
-      ),
+      ],
     );
   }
 }
